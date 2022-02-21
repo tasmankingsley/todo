@@ -79,5 +79,4 @@
         cursor: pointer;
         float: right;
     }
-
 </style>
