@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
 html {
-    font-family: Roboto mono;
+    font-family: 'Roboto Mono', monospace;
     font-weight: 300;
     font-size: 1.5rem;
 }
@@ -11,7 +13,7 @@ body {
 }
 
 input {
-    font-family: Roboto mono;
+    font-family: 'Roboto Mono', monospace;
     font-weight: 300;
     margin: 0px;
     border: 0px;
