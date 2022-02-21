@@ -1,0 +1,22 @@
+html {
+    font-family: Roboto mono;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+body {
+    background-color: #202132;
+    color: #e9eff1;
+    margin: 0 auto;
+}
+
+input {
+    font-family: Roboto mono;
+    font-weight: 300;
+    margin: 0px;
+    border: 0px;
+}
+
+button {
+    border: 0px;
+}
