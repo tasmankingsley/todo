@@ -1,5 +1,5 @@
 <script>
-    import { fade, fly } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
 
     let new_item = "";
 
@@ -23,9 +23,9 @@
         <input class="todo_input" bind:value={new_item} type="text" placeholder="something to do?">
         <button on:click={add_to_list}>＋</button>
     </div>
-    
+
     {#each todo_list as item, index}
-        <div in:fly="{{ y: 200, duration: 1000 }}" out:fly="{{ x: -200, duration: 500 }}">
+        <div class="item_div" in:fly="{{ y: 200, duration: 1000 }}" out:fly="{{ x: -200, duration: 500 }}">
             <input bind:checked={item.status} class="checkbox" type="checkbox">
             <span class:checked={item.status} class="item">{item.text}</span>
             <span on:click={() => remove_from_list(index)} class="remove_item">−</span>
@@ -36,11 +36,16 @@
 <style> 
     .input_div {
         display: flex;
+        padding: 5px 0px;
     }
 
     .todo_input {
         font-size: 1rem;
         width: 100%;
+    }
+
+    .item_div {
+        padding: 5px 0px;
     }
 
     button {
