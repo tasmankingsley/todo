@@ -19,7 +19,8 @@
 
 <div>
     <div class="input_div">
-        <input class="todo_input" bind:value={new_item} type="text" placeholder="something to do?">
+        <input class="todo_input" bind:value={new_item} type="text" placeholder="something to do?"
+        on:keydown="{event => event.key === 'Enter' && add_to_list()}">
         <button on:click={add_to_list}>＋</button>
     </div>
 
@@ -51,6 +52,7 @@
         background-color: #7a879e9e;
         color: #e9eff1;
         font-size: 1rem;
+        margin-left: 2px;
     }
 
     button:hover {
@@ -77,5 +79,9 @@
     .remove_item {
         cursor: pointer;
         float: right;
+    }
+
+    .remove_item:hover {
+        color: #e8002f;
     }
 </style>

@@ -22,3 +22,11 @@ input {
 button {
     border: 0px;
 }
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.2rem;
+	box-sizing: border-box;
+	border-radius: 3px;
+}
