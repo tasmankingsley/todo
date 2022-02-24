@@ -21,7 +21,7 @@
     <div class="input_div">
         <input class="todo_input" bind:value={new_item} type="text" placeholder="something to do?"
         on:keydown="{event => event.key === 'Enter' && add_to_list()}">
-        <button on:click={add_to_list}>＋</button>
+        <!-- <button on:click={add_to_list}>＋</button> -->
     </div>
 
     {#each $todo_list as item, index}

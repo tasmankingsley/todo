@@ -19,15 +19,21 @@
   div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 10px;
+    margin: 10px 20px;
+    transition: margin 0.5s;
   }
 
 
 
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
+  @media (min-width: 650px) {
+    div {
+      margin: 10px 100px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    div {
+      margin: 10px 200px;
     }
   }
 </style>
