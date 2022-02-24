@@ -2,7 +2,7 @@
     import { todo_list } from './store.js';
     import { fly } from 'svelte/transition';
 
-    $todo_list = [];
+    // $todo_list = [];
     let new_item = "";
 
     function add_to_list() {
