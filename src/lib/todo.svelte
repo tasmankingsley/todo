@@ -1,20 +1,19 @@
 <script>
+    import { todo_list } from './store.js';
     import { fly } from 'svelte/transition';
 
+    $todo_list = [];
     let new_item = "";
 
-    let todo_list = [];
-
     function add_to_list() {
-        todo_list = [...todo_list, {text: new_item, status: false}];
+        $todo_list = [...$todo_list, {text: new_item, status: false}];
         new_item = "";
     }
 
     function remove_from_list(index) {
-        todo_list.splice(index, 1);
-        todo_list = todo_list;
+        $todo_list.splice(index, 1);
+        $todo_list = $todo_list;
     }
-
 
 </script>
 
@@ -24,7 +23,7 @@
         <button on:click={add_to_list}>＋</button>
     </div>
 
-    {#each todo_list as item, index}
+    {#each $todo_list as item, index}
         <div class="item_div" in:fly="{{ y: 200, duration: 1000 }}" out:fly="{{ x: -200, duration: 500 }}">
             <input bind:checked={item.status} class="checkbox" type="checkbox">
             <span class:checked={item.status} class="item">{item.text}</span>
