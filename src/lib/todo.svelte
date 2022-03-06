@@ -27,7 +27,8 @@
     {#each $todo_list as item, index}
         <div class="item_div" in:fly="{{ y: 200, duration: 1000 }}" out:fly="{{ x: -200, duration: 500 }}">
             <input bind:checked={item.status} class="checkbox" type="checkbox">
-            <span class:checked={item.status} class="item">{item.text}</span>
+            <span class:checked={item.status} class="item" 
+                contenteditable="true" bind:innerHTML={item.text}></span>
             <span on:click={() => remove_from_list(index)} class="remove_item">−</span>
         </div>
     {/each}
